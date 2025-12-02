@@ -1,36 +1,71 @@
-/* --- BASE (CELULAR) --- */
 body {
     margin: 0;
     font-family: 'Times New Roman', serif;
+    scroll-behavior: smooth;
+}
+
+/* HEADER E NAVEGAÇÃO */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 nav {
     display: flex;
-    flex-direction: column; /* No celular, um link embaixo do outro */
-    align-items: center;
+    justify-content: center;
     padding: 15px;
-    background-color: white;
 }
 
-.logo {
-    font-size: 30px;
-    margin: 10px 0; /* Espaço em cima e embaixo do logo */
-    order: -1; /* Joga o Logo para o topo da lista no celular */
+.menu {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-nav a {
+.menu a {
     text-decoration: none;
-    color: black;
+    color: #333;
+    font-weight: bold;
     font-size: 14px;
-    margin: 5px 0; /* Espacinho entre os links */
-    letter-spacing: 1px;
+    transition: color 0.3s ease;
 }
 
+.menu a:hover {
+    color: #999;
+}
+
+/* SEÇÃO CAPA COM PARALLAX */
 .capa {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    margin-top: 60px;
+}
+
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
     background-image: url('flor.jpg');
-    height: 90vh; /* Altura um pouco menor no celular */
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
+    z-index: 1;
+}
+
+.capa-content {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,29 +73,148 @@ nav a {
 
 h1 {
     color: white;
-    font-size: 40px; /* Letra menor para caber no celular */
+    font-size: 100px;
     font-weight: normal;
-    text-align: center; /* Centraliza se quebrar a linha */
+    letter-spacing: -2px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    margin: 0;
 }
 
-/* --- TELA GRANDE (COMPUTADOR/TABLET) --- */
-/* Só ativa se a tela for maior que 768 pixels */
-@media (min-width: 768px) {
-    nav {
-        flex-direction: row; /* Volta a ficar um do lado do outro */
-        justify-content: center;
-    }
+/* SEÇÃO SOBRE */
+.sobre {
+    padding: 80px 40px;
+    background-color: #f9f9f9;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
 
-    .logo {
-        margin: 0 40px;
-        order: 0; /* Logo volta para o meio */
-    }
+.sobre h2,
+.fotos h2,
+.contato h2 {
+    font-size: 48px;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
 
-    nav a {
-        margin: 0 20px;
+.sobre p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.8;
+}
+
+/* SEÇÃO FOTOS */
+.fotos {
+    padding: 80px 40px;
+    background-color: #fff;
+}
+
+.fotos h2 {
+    text-align: center;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.foto-item {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.foto-item:hover {
+    transform: scale(1.05);
+}
+
+.foto-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+/* SEÇÃO CONTATO */
+.contato {
+    padding: 80px 40px;
+    background-color: #f9f9f9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contato h2 {
+    text-align: center;
+}
+
+.contato form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contato input,
+.contato textarea {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Times New Roman', serif;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.contato input:focus,
+.contato textarea:focus {
+    outline: none;
+    border-color: #999;
+}
+
+.contato button {
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contato button:hover {
+    background-color: #555;
+}
+
+/* RESPONSIVO PARA CELULAR */
+@media (max-width: 768px) {
+    .menu {
+        gap: 20px;
     }
 
     h1 {
-        font-size: 80px; /* Letra grandona de volta */
+        font-size: 60px;
+    }
+
+    .sobre,
+    .fotos,
+    .contato {
+        padding: 50px 20px;
+    }
+
+    .sobre h2,
+    .fotos h2,
+    .contato h2 {
+        font-size: 36px;
+    }
+
+    .galeria {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 }

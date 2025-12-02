@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>LorenArt Fotografia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LorenArt Fotografia</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -11,15 +12,52 @@
 
     <header>
         <nav>
-            <a href="#">INICIO</a>
-            <a href="#">SOBRE</a>
-            <span class="logo">LORENART</span> <a href="#">FOTOS</a>
-            <a href="#">CONTATO</a>
+            <ul class="menu">
+                <a href="#sobre">SOBRE</a>
+                <a href="#fotos">FOTOS</a>
+                <a href="#contato">CONTATO</a>
+            </ul>
         </nav>
     </header>
 
     <section class="capa">
-        <h1>LORENART</h1>
+        <div class="parallax-bg"></div>
+        <div class="capa-content">
+            <h1>LORENART</h1>
+        </div>
+    </section>
+
+    <section id="sobre" class="sobre">
+        <h2>SOBRE</h2>
+        <p>Bem-vindo ao LORENART. Aqui você encontrará os melhores momentos capturados através da arte da fotografia. Cada imagem conta uma história única e especial.</p>
+    </section>
+
+    <section id="fotos" class="fotos">
+        <h2>FOTOS</h2>
+        <div class="galeria">
+            <div class="foto-item">
+                <img src="foto1.jpg" alt="Foto 1">
+            </div>
+            <div class="foto-item">
+                <img src="foto2.jpg" alt="Foto 2">
+            </div>
+            <div class="foto-item">
+                <img src="foto3.jpg" alt="Foto 3">
+            </div>
+            <div class="foto-item">
+                <img src="foto4.jpg" alt="Foto 4">
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contato">
+        <h2>CONTATO</h2>
+        <form>
+            <input type="text" placeholder="Seu Nome" required>
+            <input type="email" placeholder="Seu Email" required>
+            <textarea placeholder="Sua Mensagem" rows="5" required></textarea>
+            <button type="submit">ENVIAR</button>
+        </form>
     </section>
 
 </body>
