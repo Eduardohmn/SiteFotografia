@@ -1,48 +1,66 @@
-/* Limpa as margens padrão do navegador */
+/* --- BASE (CELULAR) --- */
 body {
     margin: 0;
-    font-family: 'Times New Roman', serif; /* Fonte com "perninhas", bem chique */
+    font-family: 'Times New Roman', serif;
 }
 
-/* Arruma o menu */
 nav {
-    display: flex; /* Deixa tudo lado a lado */
-    justify-content: center; /* Centraliza tudo */
-    align-items: center; /* Alinha na altura */
-    padding: 20px;
+    display: flex;
+    flex-direction: column; /* No celular, um link embaixo do outro */
+    align-items: center;
+    padding: 15px;
     background-color: white;
 }
 
-/* Estilo dos links (botoezinhos) */
-nav a {
-    text-decoration: none; /* Tira o sublinhado */
-    color: black;
-    font-size: 12px;
-    margin: 0 20px; /* Espaço entre as palavras */
-    letter-spacing: 1px; /* Espaço entre as letras */
-}
-
-/* Estilo do Logo no menu */
 .logo {
-    font-size: 24px;
-    margin: 0 40px; /* Mais espaço em volta do logo */
+    font-size: 30px;
+    margin: 10px 0; /* Espaço em cima e embaixo do logo */
+    order: -1; /* Joga o Logo para o topo da lista no celular */
 }
 
-/* A parte da foto grande */
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    margin: 5px 0; /* Espacinho entre os links */
+    letter-spacing: 1px;
+}
+
 .capa {
-    background-image: url('flor.jpg'); /* TROQUE pelo nome da sua foto */
-    height: 100vh; /* Ocupa 100% da altura da tela */
-    background-size: cover; /* Estica a foto para cobrir tudo */
+    background-image: url('sua-foto.jpg');
+    height: 90vh; /* Altura um pouco menor no celular */
+    background-size: cover;
     background-position: center;
-    display: flex;         /* Mágica para centralizar o texto */
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* O texto grande no meio da foto */
 h1 {
     color: white;
-    font-size: 80px;
-    font-weight: normal; /* Deixa a letra mais fina */
-    letter-spacing: -2px; /* Junta um pouquinho as letras */
+    font-size: 40px; /* Letra menor para caber no celular */
+    font-weight: normal;
+    text-align: center; /* Centraliza se quebrar a linha */
+}
+
+/* --- TELA GRANDE (COMPUTADOR/TABLET) --- */
+/* Só ativa se a tela for maior que 768 pixels */
+@media (min-width: 768px) {
+    nav {
+        flex-direction: row; /* Volta a ficar um do lado do outro */
+        justify-content: center;
+    }
+
+    .logo {
+        margin: 0 40px;
+        order: 0; /* Logo volta para o meio */
+    }
+
+    nav a {
+        margin: 0 20px;
+    }
+
+    h1 {
+        font-size: 80px; /* Letra grandona de volta */
+    }
 }
