@@ -27,7 +27,7 @@ nav a {
 }
 
 .capa {
-    background-image: url('sua-foto.jpg');
+    background-image: url('flor.jpg');
     height: 90vh; /* Altura um pouco menor no celular */
     background-size: cover;
     background-position: center;
