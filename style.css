@@ -1,0 +1,48 @@
+/* Limpa as margens padrão do navegador */
+body {
+    margin: 0;
+    font-family: 'Times New Roman', serif; /* Fonte com "perninhas", bem chique */
+}
+
+/* Arruma o menu */
+nav {
+    display: flex; /* Deixa tudo lado a lado */
+    justify-content: center; /* Centraliza tudo */
+    align-items: center; /* Alinha na altura */
+    padding: 20px;
+    background-color: white;
+}
+
+/* Estilo dos links (botoezinhos) */
+nav a {
+    text-decoration: none; /* Tira o sublinhado */
+    color: black;
+    font-size: 12px;
+    margin: 0 20px; /* Espaço entre as palavras */
+    letter-spacing: 1px; /* Espaço entre as letras */
+}
+
+/* Estilo do Logo no menu */
+.logo {
+    font-size: 24px;
+    margin: 0 40px; /* Mais espaço em volta do logo */
+}
+
+/* A parte da foto grande */
+.capa {
+    background-image: url('flor.jpg'); /* TROQUE pelo nome da sua foto */
+    height: 100vh; /* Ocupa 100% da altura da tela */
+    background-size: cover; /* Estica a foto para cobrir tudo */
+    background-position: center;
+    display: flex;         /* Mágica para centralizar o texto */
+    justify-content: center;
+    align-items: center;
+}
+
+/* O texto grande no meio da foto */
+h1 {
+    color: white;
+    font-size: 80px;
+    font-weight: normal; /* Deixa a letra mais fina */
+    letter-spacing: -2px; /* Junta um pouquinho as letras */
+}
