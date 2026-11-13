@@ -1,65 +1,697 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LorenArt Fotografia</title>
+    <title>LorenArt Fotografia | Portfólio & Fotografia Autoral</title>
+    
+    <!-- Metadados de SEO e Redes Sociais -->
+    <meta name="description" content="LorenArt Fotografia — Ensaios autorais, retratos, fotografia botânica e celebrações. Capturando a essência e a poesia de cada instante através da luz.">
+    <meta name="author" content="LorenArt Fotografia">
+    <meta property="og:title" content="LorenArt Fotografia | Portfólio & Ensaios">
+    <meta property="og:description" content="Fotografia autoral, retratos e momentos únicos capturados com sensibilidade e arte.">
+    <meta property="og:image" content="flor.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon com SVG de câmera elegante -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23c5a059'><path d='M12 9a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm7-4h-2.18l-1.4-1.87A2 2 0 0013.82 2H10.18a2 2 0 00-1.6.87L7.18 5H5a3 3 0 00-3 3v11a3 3 0 003 3h14a3 3 0 003-3V8a3 3 0 00-3-3zm1 14a1 1 0 01-1 1H5a1 1 0 01-1-1V8a1 1 0 011-1h2.82a1 1 0 00.8-.4l1.6-2.13A.5.5 0 0110.62 4h3.76a.5.5 0 01.4.2l1.6 2.13a1 1 0 00.8.4H20a1 1 0 011 1v11z'/></svg>">
+
+    <!-- Google Fonts: Playfair Display + Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Estilos -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <nav>
-            <ul class="menu">
-                <a href="#sobre">SOBRE</a>
-                <a href="#fotos">FOTOS</a>
-                <a href="#contato">CONTATO</a>
-            </ul>
-        </nav>
+    <!-- CABEÇALHO & NAVEGAÇÃO -->
+    <header id="header">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-title">LORENART</span>
+                <span class="logo-subtitle">FOTOGRAFIA</span>
+            </a>
+
+            <!-- Botão Menu Mobile -->
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menu de navegação">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Menu de Links -->
+            <nav id="navMenu">
+                <ul class="menu">
+                    <li><a href="#inicio" class="nav-link active">Início</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="#especialidades" class="nav-link">Especialidades</a></li>
+                    <li><a href="#fotos" class="nav-link">Portfólio</a></li>
+                    <li><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-action">
+                <a href="#contato" class="btn btn-outline btn-sm">Agendar Ensaio</a>
+            </div>
+        </div>
     </header>
 
-    <section class="capa">
-        <div class="parallax-bg"></div>
-        <div class="capa-content">
-            <h1>LORENART</h1>
+    <main>
+        <!-- SEÇÃO HERO / CAPA -->
+        <section id="inicio" class="capa">
+            <div class="parallax-bg" style="background-image: url('flor.jpg');"></div>
+            <div class="capa-overlay"></div>
+            <div class="capa-content container">
+                <span class="capa-tag">Fotografia Autoral & Ensaios</span>
+                <h1 class="capa-title">A arte de eternizar a luz e a emoção</h1>
+                <p class="capa-description">
+                    Cada imagem é um fragmento de tempo esculpido com sensibilidade, técnica e verdade.
+                </p>
+                <div class="capa-actions">
+                    <a href="#fotos" class="btn btn-primary">Ver Portfólio</a>
+                    <a href="#contato" class="btn btn-glass">Fazer Orçamento</a>
+                </div>
+            </div>
+            <a href="#sobre" class="scroll-indicator" aria-label="Rolar para a seção sobre">
+                <span class="mouse">
+                    <span class="wheel"></span>
+                </span>
+                <span class="scroll-text">Role para explorar</span>
+            </a>
+        </section>
+
+        <!-- SEÇÃO SOBRE -->
+        <section id="sobre" class="sobre section-padding">
+            <div class="container">
+                <div class="sobre-grid">
+                    <div class="sobre-image-wrapper">
+                        <div class="sobre-image-card">
+                            <img src="flor.jpg" alt="Obra LorenArt Fotografia em foco artístico" class="sobre-img" loading="lazy">
+                            <div class="image-badge">
+                                <span class="badge-number">8+</span>
+                                <span class="badge-text">Anos de dedicação e arte</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sobre-text">
+                        <span class="section-tag">Nossa Trajetória</span>
+                        <h2 class="section-title">Histórias reais transformadas em memórias visuais</h2>
+                        <p class="lead">
+                            Bem-vindo ao universo <strong>LORENART</strong>. Acreditamos que a fotografia vai além do clique técnico: é a conexão genuína com a história de cada pessoa, natureza e momento.
+                        </p>
+                        <p>
+                            Especializados em fotografia autoral, ensaios intimistas e composições fine art, buscamos capturar a estética poética da iluminação natural e a espontaneidade dos sentimentos mais puros.
+                        </p>
+
+                        <!-- Diferenciais em destaques -->
+                        <div class="sobre-features">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>Olhar Autoral Único</h4>
+                                    <p>Composições criadas sob medida, sem clichês ou poses forçadas.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                        <path d="M12 3a9 9 0 109 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 01-4.4 2.26 5.403 5.403 0 01-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>Edição & Correfinamento</h4>
+                                    <p>Tratamento de cor profissional inspirado na textura do filme analógico.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>Direção Confortável</h4>
+                                    <p>Ambiente leve e acolhedor para que você se sinta 100% à vontade.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stats-row">
+                            <div class="stat-box">
+                                <span class="stat-num">+450</span>
+                                <span class="stat-lbl">Ensaios Realizados</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-num">+120</span>
+                                <span class="stat-lbl">Eventos Cobertos</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-num">100%</span>
+                                <span class="stat-lbl">Clientes Satisfeitos</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO ESPECIALIDADES -->
+        <section id="especialidades" class="especialidades section-padding bg-alt">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">O Que Fazemos</span>
+                    <h2 class="section-title">Especialidades & Experiências</h2>
+                    <p class="section-subtitle">
+                        Formatos sob medida para eternizar fases, pessoas e projetos com sofisticação.
+                    </p>
+                </div>
+
+                <div class="especialidades-grid">
+                    <div class="servico-card">
+                        <div class="servico-icon">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <h3>Retratos & Ensaios Pessoais</h3>
+                        <p>Ensaios individuais, femininos, masculinos e artísticos que revelam sua autenticidade e beleza singular.</p>
+                        <a href="#contato" class="servico-link">Consultar Ensaio &rarr;</a>
+                    </div>
+
+                    <div class="servico-card">
+                        <div class="servico-icon">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                            </svg>
+                        </div>
+                        <h3>Casais & Casamentos</h3>
+                        <p>Registro documental e poético de uniões e histórias de amor, com foco na emoção e espontaneidade dos momentos.</p>
+                        <a href="#contato" class="servico-link">Consultar Ensaio &rarr;</a>
+                    </div>
+
+                    <div class="servico-card">
+                        <div class="servico-icon">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 6v6l4 2"></path>
+                            </svg>
+                        </div>
+                        <h3>Fotografia Fine Art & Natureza</h3>
+                        <p>Quadros, impressões de alta fidelidade e estudos visuais de botânica, arquitetura e paisagens poéticas.</p>
+                        <a href="#contato" class="servico-link">Consultar Quadros &rarr;</a>
+                    </div>
+
+                    <div class="servico-card">
+                        <div class="servico-icon">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg>
+                        </div>
+                        <h3>Branding & Editorial</h3>
+                        <p>Imagens marcantes para profissionais, marcas, moda e produtos que desejam se posicionar com alto valor estético.</p>
+                        <a href="#contato" class="servico-link">Consultar Ensaio &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO FOTOS / PORTFÓLIO -->
+        <section id="fotos" class="fotos section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Trabalhos Selecionados</span>
+                    <h2 class="section-title">Galeria de Obras</h2>
+                    <p class="section-subtitle">
+                        Explore uma curadoria de cliques autorais. Clique em qualquer foto para ampliar em tela cheia.
+                    </p>
+                </div>
+
+                <!-- Filtros Interativos -->
+                <div class="galeria-filtros">
+                    <button class="filtro-btn active" data-filter="all">Todas as Obras</button>
+                    <button class="filtro-btn" data-filter="natureza">Natureza & Botânica</button>
+                    <button class="filtro-btn" data-filter="retratos">Retratos</button>
+                    <button class="filtro-btn" data-filter="editorial">Editorial</button>
+                    <button class="filtro-btn" data-filter="eventos">Eventos & Casal</button>
+                </div>
+
+                <!-- Grid de Galeria -->
+                <div class="galeria">
+                    <!-- Foto 1: Flor local da LorenArt -->
+                    <div class="foto-item" data-category="natureza" data-title="Flor de Lótus & Poesia Botânica" data-desc="Composição botânica em luz natural suave">
+                        <div class="foto-card">
+                            <img src="flor.jpg" alt="Flor de Lótus e fotografia de natureza autoral" loading="lazy">
+                            <div class="foto-overlay">
+                                <span class="foto-badge">Natureza & Botânica</span>
+                                <h3 class="foto-title">Flor de Lótus & Poesia</h3>
+                                <p class="foto-desc">Luz difusa e texturas delicadas</p>
+                                <button class="btn-zoom" aria-label="Ampliar foto">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="11" cy="11" r="8"></circle>
+                                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                        <line x1="11" y1="8" x2="11" y2="14"></line>
+                                        <line x1="8" y1="11" x2="14" y2="11"></line>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Foto 2: Retrato Feminino Expressivo -->
+                    <div class="foto-item" data-category="retratos" data-title="Retrato em Luz Dourada" data-desc="Ensaio pessoal com foco no olhar e profundidade">
+                        <div class="foto-card">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=80" alt="Retrato feminino elegante em ensaio artístico" loading="lazy">
+                            <div class="foto-overlay">
+                                <span class="foto-badge">Retratos</span>
+                                <h3 class="foto-title">Retrato em Luz Dourada</h3>
+                                <p class="foto-desc">Expressividade e profundidade de olhar</p>
+                                <button class="btn-zoom" aria-label="Ampliar foto">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="11" cy="11" r="8"></circle>
+                                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                        <line x1="11" y1="8" x2="11" y2="14"></line>
+                                        <line x1="8" y1="11" x2="14" y2="11"></line>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Foto 3: Paisagem e Natureza -->
+                    <div class="foto-item" data-category="natureza" data-title="Serenidade & Montanhas" data-desc="Composição de paisagem ao crepúsculo">
+                        <div class="foto-card">
+                            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80" alt="Fotografia de paisagem dramática ao pôr do sol" loading="lazy">
+                            <div class="foto-overlay">
+                                <span class="foto-badge">Natureza & Botânica</span>
+                                <h3 class="foto-title">Serenidade & Montanhas</h3>
+                                <p class="foto-desc">Fotografia de paisagem ao crepúsculo</p>
+                                <button class="btn-zoom" aria-label="Ampliar foto">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="11" cy="11" r="8"></circle>
+                                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                        <line x1="11" y1="8" x2="11" y2="14"></line>
+                                        <line x1="8" y1="11" x2="14" y2="11"></line>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Foto 4: Editorial Conceitual -->
+                    <div class="foto-item" data-category="editorial" data-title="Minimalismo Cromático" data-desc="Ensaio de moda e estética contemporânea">
+                        <div class="foto-card">
+                            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80" alt="Ensaio editorial com foco em moda e cores" loading="lazy">
+                            <div class="foto-overlay">
+                                <span class="foto-badge">Editorial</span>
+                                <h3 class="foto-title">Minimalismo Cromático</h3>
+                                <p class="foto-desc">Cores vibrantes e direção estética refinada</p>
+                                <button class="btn-zoom" aria-label="Ampliar foto">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="11" cy="11" r="8"></circle>
+                                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                        <line x1="11" y1="8" x2="11" y2="14"></line>
+                                        <line x1="8" y1="11" x2="14" y2="11"></line>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Foto 5: Casal e Conexão -->
+                    <div class="foto-item" data-category="eventos" data-title="Conexão Eterna" data-desc="Ensaio pré-wedding intimista ao entardecer">
+                        <div class="foto-card">
+                            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80" alt="Momento romântico de casal em celebração íntima" loading="lazy">
+                            <div class="foto-overlay">
+                                <span class="foto-badge">Eventos & Casal</span>
+                                <h3 class="foto-title">Conexão Eterna</h3>
+                                <p class="foto-desc">Espontaneidade e carinho sem filtros</p>
+                                <button class="btn-zoom" aria-label="Ampliar foto">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="11" cy="11" r="8"></circle>
+                                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                        <line x1="11" y1="8" x2="11" y2="14"></line>
+                                        <line x1="8" y1="11" x2="14" y2="11"></line>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Foto 6: Retrato Masculino Natural -->
+                    <div class="foto-item" data-category="retratos" data-title="Autenticidade & Personalidade" data-desc="Retrato de perfil com sombras bem desenhadas">
+                        <div class="foto-card">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=900&q=80" alt="Retrato masculino com iluminação artística suave" loading="lazy">
+                            <div class="foto-overlay">
+                                <span class="foto-badge">Retratos</span>
+                                <h3 class="foto-title">Autenticidade & Força</h3>
+                                <p class="foto-desc">Estudo de luz e presença natural</p>
+                                <button class="btn-zoom" aria-label="Ampliar foto">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="11" cy="11" r="8"></circle>
+                                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                        <line x1="11" y1="8" x2="11" y2="14"></line>
+                                        <line x1="8" y1="11" x2="14" y2="11"></line>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Foto 7: Detalhes de Folhagem e Sol -->
+                    <div class="foto-item" data-category="natureza" data-title="Raios de Luz na Floresta" data-desc="A poesia dos pequenos detalhes da flora brasileira">
+                        <div class="foto-card">
+                            <img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=900&q=80" alt="Fotografia macro e luz atravessando a vegetação" loading="lazy">
+                            <div class="foto-overlay">
+                                <span class="foto-badge">Natureza & Botânica</span>
+                                <h3 class="foto-title">Raios de Luz & Folhas</h3>
+                                <p class="foto-desc">Texturas e contrastes da flora viva</p>
+                                <button class="btn-zoom" aria-label="Ampliar foto">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="11" cy="11" r="8"></circle>
+                                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                        <line x1="11" y1="8" x2="11" y2="14"></line>
+                                        <line x1="8" y1="11" x2="14" y2="11"></line>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Foto 8: Preto e Branco Editorial -->
+                    <div class="foto-item" data-category="editorial" data-title="Geometria & Sombra" data-desc="Composição monocromática de alto impacto visual">
+                        <div class="foto-card">
+                            <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=900&q=80" alt="Fotografia de moda artística em preto e branco" loading="lazy">
+                            <div class="foto-overlay">
+                                <span class="foto-badge">Editorial</span>
+                                <h3 class="foto-title">Geometria & Sombra</h3>
+                                <p class="foto-desc">Fine art monocromático e curvas de luz</p>
+                                <button class="btn-zoom" aria-label="Ampliar foto">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="11" cy="11" r="8"></circle>
+                                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                        <line x1="11" y1="8" x2="11" y2="14"></line>
+                                        <line x1="8" y1="11" x2="14" y2="11"></line>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Foto 9: Casamento / Celebração -->
+                    <div class="foto-item" data-category="eventos" data-title="Celebração & Magia" data-desc="Instante de pura emoção e cumplicidade">
+                        <div class="foto-card">
+                            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=80" alt="Cena emocionante de casamento ao ar livre" loading="lazy">
+                            <div class="foto-overlay">
+                                <span class="foto-badge">Eventos & Casal</span>
+                                <h3 class="foto-title">Celebração & Magia</h3>
+                                <p class="foto-desc">Memórias inesquecíveis registradas para sempre</p>
+                                <button class="btn-zoom" aria-label="Ampliar foto">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="11" cy="11" r="8"></circle>
+                                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                        <line x1="11" y1="8" x2="11" y2="14"></line>
+                                        <line x1="8" y1="11" x2="14" y2="11"></line>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DEPOIMENTOS -->
+        <section id="depoimentos" class="depoimentos section-padding bg-alt">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Depoimentos</span>
+                    <h2 class="section-title">O que dizem os nossos clientes</h2>
+                    <p class="section-subtitle">A confiança de quem já viveu a experiência LorenArt.</p>
+                </div>
+
+                <div class="depoimentos-grid">
+                    <div class="depoimento-card">
+                        <div class="estrelas">★★★★★</div>
+                        <p class="depoimento-texto">
+                            "Fazer o ensaio com a LorenArt foi uma das experiências mais libertadoras da minha vida. A paciência, o carinho e o olhar artístico capturaram uma versão de mim que eu nunca tinha enxergado antes."
+                        </p>
+                        <div class="cliente-info">
+                            <div class="cliente-avatar">MC</div>
+                            <div>
+                                <h4 class="cliente-nome">Mariana Castro</h4>
+                                <span class="cliente-tipo">Ensaio Feminino Autoral</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="depoimento-card">
+                        <div class="estrelas">★★★★★</div>
+                        <p class="depoimento-texto">
+                            "A sensibilidade para registrar nosso casamento foi indescritível. Não precisou de fotos engessadas: as lágrimas, os sorrisos e a energia daquele dia estão vivas em cada fotografia."
+                        </p>
+                        <div class="cliente-info">
+                            <div class="cliente-avatar">RA</div>
+                            <div>
+                                <h4 class="cliente-nome">Rodrigo & Amanda</h4>
+                                <span class="cliente-tipo">Cobertura de Casamento</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="depoimento-card">
+                        <div class="estrelas">★★★★★</div>
+                        <p class="depoimento-texto">
+                            "As fotos de branding elevaram o patamar da minha marca pessoal e do meu consultório. Profissionalismo impecável do início à entrega final dos arquivos em alta resolução."
+                        </p>
+                        <div class="cliente-info">
+                            <div class="cliente-avatar">BL</div>
+                            <div>
+                                <h4 class="cliente-nome">Dra. Beatriz Lima</h4>
+                                <span class="cliente-tipo">Ensaio de Branding Profissional</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO CONTATO -->
+        <section id="contato" class="contato section-padding">
+            <div class="container">
+                <div class="contato-wrapper">
+                    <!-- Informações de Contato -->
+                    <div class="contato-info">
+                        <span class="section-tag">Entre em Contato</span>
+                        <h2 class="section-title">Vamos criar algo inesquecível juntos?</h2>
+                        <p class="lead">
+                            Conte-me sobre a sua ideia, ensaio desejado ou evento. Respondemos rapidamente para agendar uma conversa e planejar cada detalhe.
+                        </p>
+
+                        <div class="info-list">
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                                        <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm5.78 14.07c-.24.68-1.39 1.3-1.92 1.38-.49.08-1.12.11-3.62-.92-2.88-1.19-4.73-4.14-4.87-4.33-.14-.19-1.16-1.55-1.16-2.95s.73-2.09 1-2.37c.24-.25.53-.31.71-.31.18 0 .36.002.51.01.17.01.4-.06.62.48.24.58.82 2 .89 2.15.07.15.12.33.02.53-.1.2-.15.32-.3.49-.15.17-.32.39-.46.52-.15.15-.31.31-.13.62.18.31.8 1.32 1.72 2.14 1.18 1.05 2.17 1.38 2.48 1.53.31.15.49.13.67-.08.19-.21.79-.92 1-1.24.21-.31.42-.26.7-.16.29.1 1.83.86 2.14 1.02.31.15.52.23.6.36.08.13.08.76-.16 1.44z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h5>WhatsApp Direto</h5>
+                                    <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20ensaios%20da%20LorenArt" target="_blank" rel="noopener noreferrer">(11) 99999-9999</a>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h5>E-mail Comercial</h5>
+                                    <a href="mailto:contato@lorenartfotografia.com">contato@lorenartfotografia.com</a>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h5>Atendimento</h5>
+                                    <p>Estúdio Próprio & Ensaios Externos (São Paulo e Região / Disponibilidade para viagens)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Redes Sociais -->
+                        <div class="social-links">
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </a>
+                            <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Pinterest">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                    <path d="M12 0a12 12 0 00-4.37 23.18c-.06-.99-.1-2.52.02-3.61l.73-3.1s-.19-.37-.19-.92c0-.86.5-1.5 1.13-1.5.53 0 .79.4.79.88 0 .54-.34 1.34-.52 2.08-.15.62.31 1.13.92 1.13 1.11 0 1.96-1.17 1.96-2.86 0-1.5-1.07-2.54-2.61-2.54-1.9 0-3.02 1.43-3.02 2.9 0 .58.22 1.19.5 1.53.05.07.06.13.04.2l-.19.78c-.03.12-.1.17-.23.11-1.04-.48-1.69-2-1.69-3.23 0-2.62 1.91-5.04 5.5-5.04 2.89 0 5.14 2.06 5.14 4.81 0 2.87-1.81 5.18-4.32 5.18-.84 0-1.64-.44-1.91-.96l-.52 1.98c-.19.72-.7 1.63-1.04 2.18A11.97 11.97 0 0012 24c6.63 0 12-5.37 12-12S18.63 0 12 0z"/>
+                                </svg>
+                            </a>
+                            <a href="https://behance.net" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Behance">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                    <path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.171 3-3.455 0-5.555-2.544-5.555-5.748 0-3.415 2.164-5.752 5.485-5.752 3.376 0 5.195 2.296 5.195 5.556 0 .445-.064.912-.064.912h-8.082c.075 1.638 1.235 2.808 2.923 2.808 1.411 0 2.294-.712 2.656-1.776h2.613zm-7.697-3.766h5.275c-.092-1.282-.942-2.316-2.569-2.316-1.666 0-2.585 1.055-2.706 2.316zm-11.029 3.766c1.694 0 2.801-.734 2.801-2.222 0-1.127-.674-1.745-1.621-1.934.821-.295 1.393-.979 1.393-1.954 0-1.397-1.096-2.09-2.573-2.09h-5.001v8.2h5.001zm-2.825-6.529h2.317c.725 0 1.218.353 1.218 1.051 0 .684-.509 1.077-1.233 1.077h-2.302v-2.128zm0 3.324h2.484c.829 0 1.378.435 1.378 1.229 0 .825-.568 1.283-1.42 1.283h-2.442v-2.512z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Formulário com Validação Interativa -->
+                    <div class="contato-form-container">
+                        <form id="formContato" class="form-card">
+                            <h3 class="form-heading">Solicitar Orçamento</h3>
+                            <p class="form-subheading">Preencha os dados e entraremos em contato rapidamente:</p>
+
+                            <div class="form-group">
+                                <label for="nome">Seu Nome Completo *</label>
+                                <input type="text" id="nome" name="nome" placeholder="Ex: Ana Clara Martins" required>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Seu E-mail *</label>
+                                    <input type="email" id="email" name="email" placeholder="nome@exemplo.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="telefone">WhatsApp / Telefone *</label>
+                                    <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="tipoEnsaio">Tipo de Ensaio ou Projeto *</label>
+                                <select id="tipoEnsaio" name="tipoEnsaio" required>
+                                    <option value="" disabled selected>Selecione uma modalidade...</option>
+                                    <option value="Retratos & Ensaio Pessoal">Retratos & Ensaio Pessoal</option>
+                                    <option value="Casais & Pré-Wedding">Casais & Pré-Wedding</option>
+                                    <option value="Casamentos & Cerimônias">Casamentos & Cerimônias</option>
+                                    <option value="Fotografia Botânica & Fine Art">Fotografia Botânica & Fine Art</option>
+                                    <option value="Branding & Profissional">Branding & Profissional</option>
+                                    <option value="Outro Projeto Especial">Outro Projeto Especial</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="mensagem">Conte um pouco da sua ideia *</label>
+                                <textarea id="mensagem" name="mensagem" rows="4" placeholder="Descreva sua visão, data preferida, local ou dúvidas..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block" id="btnEnviar">
+                                <span class="btn-text">Enviar Mensagem</span>
+                                <span class="btn-spinner" aria-hidden="true"></span>
+                            </button>
+
+                            <div class="form-footer-note">
+                                <span>🔒 Seus dados estão seguros e não enviamos spam.</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="#" class="logo footer-logo">
+                    <span class="logo-title">LORENART</span>
+                    <span class="logo-subtitle">FOTOGRAFIA</span>
+                </a>
+                <p class="footer-tagline">
+                    Registrando o invisível que habita o cotidiano. Ensaios com alma, luz e sensibilidade estética.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre o Estúdio</a></li>
+                    <li><a href="#especialidades">Especialidades</a></li>
+                    <li><a href="#fotos">Galeria Selecionada</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#contato">Solicitar Orçamento</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contato">
+                <h4>Atendimento</h4>
+                <p>São Paulo, SP - Atendimento com hora marcada</p>
+                <p>E-mail: contato@lorenartfotografia.com</p>
+                <p>WhatsApp: (11) 99999-9999</p>
+            </div>
         </div>
-    </section>
 
-    <section id="sobre" class="sobre">
-        <h2>SOBRE</h2>
-        <p>Bem-vindo ao LORENART. Aqui você encontrará os melhores momentos capturados através da arte da fotografia. Cada imagem conta uma história única e especial.</p>
-    </section>
-
-    <section id="fotos" class="fotos">
-        <h2>FOTOS</h2>
-        <div class="galeria">
-            <div class="foto-item">
-                <img src="foto1.jpg" alt="Foto 1">
-            </div>
-            <div class="foto-item">
-                <img src="foto2.jpg" alt="Foto 2">
-            </div>
-            <div class="foto-item">
-                <img src="foto3.jpg" alt="Foto 3">
-            </div>
-            <div class="foto-item">
-                <img src="foto4.jpg" alt="Foto 4">
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>&copy; <span id="currentYear"></span> LorenArt Fotografia. Todos os direitos reservados.</p>
+                <a href="#inicio" class="back-to-top" id="backToTop" aria-label="Voltar ao início da página">
+                    Voltar ao topo &uarr;
+                </a>
             </div>
         </div>
-    </section>
+    </footer>
 
-    <section id="contato" class="contato">
-        <h2>CONTATO</h2>
-        <form>
-            <input type="text" placeholder="Seu Nome" required>
-            <input type="email" placeholder="Seu Email" required>
-            <textarea placeholder="Sua Mensagem" rows="5" required></textarea>
-            <button type="submit">ENVIAR</button>
-        </form>
-    </section>
+    <!-- MODAL LIGHTBOX PARA A GALERIA -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualizador de fotos em tela cheia">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Fechar visualizador">&times;</button>
+        <button class="lightbox-prev" id="lightboxPrev" aria-label="Foto anterior">&#10094;</button>
+        <button class="lightbox-next" id="lightboxNext" aria-label="Próxima foto">&#10095;</button>
+        
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightboxImg">
+            <div class="lightbox-caption">
+                <span class="lightbox-category" id="lightboxCategory"></span>
+                <h4 class="lightbox-title" id="lightboxTitle"></h4>
+                <p class="lightbox-desc" id="lightboxDesc"></p>
+            </div>
+        </div>
+    </div>
 
+    <!-- BOTÃO FLUTUANTE WHATSAPP -->
+    <a href="https://wa.me/5511999999999?text=Olá!%20Vim%20pelo%20site%20da%20LorenArt%20e%20gostaria%20de%20um%20orçamento" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Falar conosco no WhatsApp">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="white">
+            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm5.78 14.07c-.24.68-1.39 1.3-1.92 1.38-.49.08-1.12.11-3.62-.92-2.88-1.19-4.73-4.14-4.87-4.33-.14-.19-1.16-1.55-1.16-2.95s.73-2.09 1-2.37c.24-.25.53-.31.71-.31.18 0 .36.002.51.01.17.01.4-.06.62.48.24.58.82 2 .89 2.15.07.15.12.33.02.53-.1.2-.15.32-.3.49-.15.17-.32.39-.46.52-.15.15-.31.31-.13.62.18.31.8 1.32 1.72 2.14 1.18 1.05 2.17 1.38 2.48 1.53.31.15.49.13.67-.08.19-.21.79-.92 1-1.24.21-.31.42-.26.7-.16.29.1 1.83.86 2.14 1.02.31.15.52.23.6.36.08.13.08.76-.16 1.44z"/>
+        </svg>
+        <span class="whatsapp-tooltip">Orçamento no WhatsApp</span>
+    </a>
+
+    <!-- TOAST NOTIFICATION DE SUCESSO -->
+    <div class="toast" id="toastNotification" role="alert" aria-live="assertive">
+        <div class="toast-icon">✓</div>
+        <div class="toast-message">
+            <strong>Mensagem enviada com sucesso!</strong>
+            <p>Agradecemos pelo contato. Retornaremos em breve!</p>
+        </div>
+    </div>
+
+    <!-- Script Principal -->
+    <script src="script.js"></script>
 </body>
 
 </html>
